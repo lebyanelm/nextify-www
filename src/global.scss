@@ -24,3 +24,23 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "./variables.scss";
+
+
+/* Browser resets */
+ion-content,
+html
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ion-content {
+  --ion-background-color: #000000;
+}
+
+* {
+  font-size: $DEFAULT_FONT_SIZE;
+  font-family: $DEFAULT_FONT_FAMILY;
+  color: $TEXT_COLOR;
+}

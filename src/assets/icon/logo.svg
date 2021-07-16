@@ -2,4 +2,5 @@
 <path d="M548 0H0V548H548V0Z" fill="black"/>
 <path opacity="0.546" fill-rule="evenodd" clip-rule="evenodd" d="M280.983 113L441.5 273.517L280.983 434.033L254.248 407.298L369.125 292.421H106V254.612H369.125L254.248 139.735L280.983 113Z" fill="white" stroke="black" stroke-width="5" stroke-miterlimit="10" stroke-linecap="square"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M167.695 113L328.21 273.515L167.695 434.033L140.959 407.298L274.74 273.515L140.959 139.735L167.695 113Z" fill="white" stroke="black" stroke-width="5" stroke-miterlimit="10" stroke-linecap="square"/>
+<rect x="7.5" y="7.5" width="533" height="533" rx="266.5" stroke="white" stroke-width="15"/>
 </svg>

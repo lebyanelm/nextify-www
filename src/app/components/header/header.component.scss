@@ -1,0 +1,22 @@
+@import "../../../variables.scss";
+
+// The container of the header
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: $DEFAULT_PADDING 0;
+  position: static;
+}
+
+/* Header logo brand logo */
+.header-container .header-brand-logo img {
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid $TEXT_COLOR;
+  transform: translateY(60px);
+  transition: transform 300ms ease;
+}
+
+.header-container[isScrolledPage=true] .header-brand-logo img {
+  transform: translateY(0);
+}

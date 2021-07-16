@@ -33,6 +33,7 @@ html
 body {
   padding: 0;
   margin: 0;
+  height: 90000px;
 }
 
 ion-content {
@@ -43,4 +44,71 @@ ion-content {
   font-size: $DEFAULT_FONT_SIZE;
   font-family: $DEFAULT_FONT_FAMILY;
   color: $TEXT_COLOR;
+}
+
+a {
+  font-weight: 600;
+  color: $THEME_COLOR;
+  text-decoration: none;
+  border-bottom: 2px solid $THEME_COLOR;
+}
+
+/* Spaces content in between */
+.space {
+  flex: 5;
+}
+
+
+/* Page container */
+.page-content {
+  padding: 0 $DEFAULT_PAGE_MARGIN;
+}
+
+
+/* Default Button */
+button,
+.button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px $DEFAULT_PADDING;
+  border: none;
+  border-radius: 100px;
+  font-weight: 600;
+  background: $THEME_COLOR;
+  font-size: $DEFAULT_BUTTON_FONT_SIZE !important;
+  cursor: pointer;
+  transition: transform 300ms ease;
+  margin: 0 5px;
+}
+
+button > span,
+.button > span  {
+  font-size: $DEFAULT_BUTTON_FONT_SIZE !important;
+}
+
+button.bordered,
+.button.bordered {
+  background: transparent;
+  border: $BORDER !important;
+}
+
+button:hover,
+.button:hover {
+  transform: scale(1.04);
+}
+
+button:first-child,
+.button:first-child {
+  margin-left: 0;
+}
+
+button:last-child,
+.button:last-child {
+  margin-right: 0;
+}
+
+/* Icons */
+ion-icon {
+  font-size: $DEFAULT_ICON_SIZE;
 }

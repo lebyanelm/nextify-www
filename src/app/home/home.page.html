@@ -1,5 +1,80 @@
-<ion-content>
+<ion-content (ionScroll)="Header.scrollEvent($event)" [scrollEvents]=true>
   <div class="page-content">
-    <app-header></app-header>
+    <app-header #Header></app-header>
+
+    <div class="section primary">
+      <div class="section-title subheader-title maxed-width">Move your business to digital and
+        transform your workflow for growth.</div>
+
+        <div class="section-buttons">
+          <a href="" class="button"><span>See pricing options</span></a>
+          <a href="" class="button bordered"><span>Watch a demo</span></a>
+        </div>
+
+        <div class="description margin-top maxed-width">Cross platform. Integrable anywhere.</div>
+
+        <div class="section-image"></div>
+    </div>
+
+
+    <div class="section secondary">
+      <div class="section-tag-name">Nextify for Partners</div>
+      <div class="section-title header-title maxed-width">Your food deserves a platform for growth.</div>
+
+      <div class="description maxed-width">We made design our top priority, because what's one way to impress your customers other
+        than looking professional?
+      </div>
+    </div>
+
+    <!-- Input field so that visitors can enter their emails to sign up for a demo -->
+    <div class="section secondary">
+      <div class="form-container">
+        <div class="input-combined">
+          <input type="email" placeholder="name@email.com">
+          <button>
+            <span>Request a demo</span>
+            <ion-icon name=arrow-forward></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section centered primary">
+      <div class="section-title subheader-title maxed-width">Cross&mdash;platform. <br>Multiple devices</div>
+      <div class="description maxed-width">Stand&mdash;out from the crowd of other businesses and get your customers talking
+        about your service. Your app can be accessed anywhere by your customers from wherever you want them to.
+      </div>
+      <img src="/assets/images/devices-mockup.png" alt="">
+    </div>
+
+    <div class="flex-layout">
+      <div class="section primary">
+        <img class="icon" src="/assets/icon/rectangle.svg" alt="square">
+        <div class="section-title subheader-title">Happy<br>customers.</div>
+
+        <div class="description">Out of all the business crowd out there, you'll get to stand&mdash;out
+          from other brands. Over 90% of your customers have a smartphone, this is an opportunity
+          to offer more by bringing them your business into their fingertips. Packed with a lot of
+          core features they will sure be impressed, increasing sales and customer loyalty.
+        </div>
+      </div>
+
+      <div class="section primary right-align">
+        <img class="icon" src="/assets/icon/polygon.svg" alt="polygon">
+        <div class="section-title subheader-title">Made<br>to be simple.</div>
+
+        <div class="description">We went through the complexities so you won’t even have to think about them,
+          giving you the freedom of focusing more on your business, and we make sure the platform
+          is easy to use from your side, and a memorable online ordering experience for your customers.
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-layout center bottom-links">
+      <div class="section primary">
+        <a href="https://www.nextify.co.za/pricing" class="button"><span>See pricing options</span></a>
+        <a href="https://www.nextify.co.za/contact-us" class="button bordered"><span>Request a demo</span></a>
+      </div>
+    </div>
   </div>
 </ion-content>

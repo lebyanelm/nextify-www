@@ -11,4 +11,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
 
+  scrollEvent(event) {
+    event.target.getScrollElement()
+      .then((scrollElement) => {
+        const scrollTop = scrollElement.scrollTop;
+        if (scrollTop > 0) {
+          this.isScrolledPage = true;
+        } else {
+          this.isScrolledPage = false;
+        }
+      });
+  }
 }

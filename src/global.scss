@@ -44,6 +44,12 @@ ion-content {
   font-size: $DEFAULT_FONT_SIZE;
   font-family: $DEFAULT_FONT_FAMILY;
   color: $TEXT_COLOR;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: $THEME_COLOR;
+  color: $TEXT_COLOR;
 }
 
 a {
@@ -53,25 +59,95 @@ a {
   border-bottom: 2px solid $THEME_COLOR;
 }
 
-/* Spaces content in between */
+
+/* Helpers for moving elements around */
 .space {
   flex: 5;
+}
+
+.padding-up {
+  padding-top: $DEFAULT_PADDING;
+}
+
+.padding-bottom {
+  padding-bottom: $DEFAULT_PADDING;
+}
+
+.padding-left {
+  padding-left: $DEFAULT_PADDING;
+}
+
+.padding-right {
+  padding-right: $DEFAULT_PADDING;
+}
+
+.margin-up {
+  padding-top: $DEFAULT_PADDING;
+}
+
+.margin-bottom {
+  padding-bottom: $DEFAULT_PADDING;
+}
+
+.margin-left {
+  padding-left: $DEFAULT_PADDING;
+}
+
+.margin-right {
+  padding-right: $DEFAULT_PADDING;
+}
+
+.flex-layout {
+  display: flex;
+  gap: 50px;
+}
+
+.flex-layout.center {
+  justify-content: center;
+}
+
+.flex-layout.column {
+  flex-direction: column;
+}
+
+.description {
+  color: $TEXT_COLOR_LIGHT;
+  font-weight: 500;
+}
+
+.maxed-width {
+  max-width: 60%;
+}
+
+
+/* Icons */
+ion-icon {
+  font-size: $DEFAULT_ICON_SIZE;
+}
+
+
+/* Page header element */
+app-header {
+  width: 100%;
 }
 
 
 /* Page container */
 .page-content {
+  position: relative !important;
   padding: 0 $DEFAULT_PAGE_MARGIN;
 }
 
 
 /* Default Button */
 button,
-.button {
+.button,
+input,
+.input {
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  padding: 8px $DEFAULT_PADDING;
+  padding: 10px $DEFAULT_PADDING;
   border: none;
   border-radius: 100px;
   font-weight: 600;
@@ -108,7 +184,162 @@ button:last-child,
   margin-right: 0;
 }
 
-/* Icons */
-ion-icon {
-  font-size: $DEFAULT_ICON_SIZE;
+
+/* Input fields and forms */
+input,
+.input {
+  border: 2px solid darken($TEXT_COLOR_LIGHT, .2);
+  background: $BACKGROUND_COLOR;
+  padding: 10px $DEFAULT_PADDING;
+  cursor: text;
+  transition: border-color 300ms ease;
+  font-weight: 600;
+}
+
+input:focus,
+.input:focus-within {
+  border-color: $TEXT_COLOR;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 80px 100px 0 100px;
+  margin: 0 auto;
+}
+
+
+.input-combined {
+  display: flex;
+  align-items: center;
+}
+
+.input-combined input {
+  flex: 1;
+  border-radius: 0;
+  margin: 0;
+  border-right: none;
+}
+
+.input-combined button {
+  margin: 0;
+  border-radius: 0;
+  padding: 11.5px $DEFAULT_PADDING;
+}
+
+
+button,
+.button,
+input,
+.input {
+  outline: none;
+}
+
+
+/* Header title */
+.header-title,
+.subheader-title {
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.header-title {
+  font-size: $DEFAULT_HEADER_FONT_SIZE;
+  font-weight: bolder;
+}
+
+.subheader-title {
+  font-size: $DEFAULT_SUBHEADER_FONT_SIZE;
+}
+
+
+/* Sections */
+.sections {
+  justify-content: center;
+  position: relative;
+}
+
+.sections:before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section {
+  width: 100%;
+  text-align: left;
+}
+
+.section img {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.section.primary {
+  margin-top: 140px;
+}
+
+.section.secondary {
+  margin-top: 50px;
+}
+
+.section.centered {
+  text-align: center;
+}
+
+.section.right-align {
+  text-align: right;
+}
+
+.section.centered > * {
+  margin: 0 auto !important;
+}
+
+.section .section-buttons {
+  margin-top: 20px;
+}
+
+.section .description {
+  margin-top: 5px !important;
+  margin-bottom: 30px !important;
+}
+
+.section .icon {
+  height: 40px;
+  width: auto;
+}
+
+.section .section-image {
+  height: 300px;
+  width: calc(100% + 60px);
+  background: $TEXT_COLOR_LIGHT;
+  transform: translateX(-30px);
+  border-radius: 10px;
+  margin-top: $DEFAULT_PADDING;
+}
+
+.section .section-tag-name {
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.section .section-title {
+  margin-bottom: 20px;
+}
+
+
+
+.bottom-links {
+  display: grid;
+  place-items: center;
 }

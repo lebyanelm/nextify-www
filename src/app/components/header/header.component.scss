@@ -13,6 +13,10 @@
 }
 
 /* Header logo brand logo */
+.header-container .header-brand-logo {
+  transition: opacity 300ms ease;
+}
+
 .header-container .header-brand-logo img {
   height: 40px;
   border-radius: 100px;

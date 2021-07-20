@@ -1,11 +1,13 @@
 <!-- The container of the header -->
 <div class="header-container" [attr.isScrolledPage]="this.isScrolledPage">
   <!-- The logo of the site brand -->
-  <div class="header-brand-logo"><img src="/assets/icon/logo.svg" alt="Logo"></div>
+  <div class="header-brand-logo" [attr.isShow]="this.isShowLogo">
+    <img src="/assets/icon/logo.svg" alt="Logo">
+  </div>
   <div class="space"></div>
 
   <!-- Partners login button -->
-  <a class="button partner-login-button bordered" href="https://management.nextify.co.za/signin?ref=_web" target="_blank">
+  <a class="button partner-login-button light" href="https://management.nextify.co.za/signin?ref=_web" target="_blank">
     <span>Management Login</span>
     <ion-icon name=arrow-forward></ion-icon>
   </a>

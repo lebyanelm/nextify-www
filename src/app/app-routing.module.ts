@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'onboarding/pricing',
+    loadChildren: () => import('./pages/pricing/pricing.module').then( m => m.PricingPageModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./pages/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
+  },
+  {
+    path: 'onboarding/custom-pricing',
+    loadChildren: () => import('./pages/custom-pricing/custom-pricing.module').then( m => m.CustomPricingPageModule)
+  },
 ];
 
 @NgModule({

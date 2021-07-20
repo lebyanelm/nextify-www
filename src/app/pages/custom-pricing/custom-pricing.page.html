@@ -1,0 +1,49 @@
+<ion-content (ionScroll)="Header.scrollEvent($event)" [scrollEvents]=true>
+  <app-header #Header></app-header>
+
+  <div class="page-content">
+    <div class="section primary">
+      <div class="section-title subheader-title">Need a better pricing.<br>We are here to listen.</div>
+      <div class="section-buttons">
+        <button (click)="NameInput.focus()">Send us an offer</button>
+      </div>
+
+      <br>
+      <div class="section-image">
+        <img src="/assets/images/women-writing-onfloating-notes.gif">
+      </div>
+    </div>
+
+    <div class="section primary">
+      <div class="section-tag-name">Nextify for Partners</div>
+      <div class="section-title subheader-title">Request custom pricing.</div>
+      <div class="description">If you feel like our pricing packages don't fit your business model, let us know which one would be best.</div>
+    </div>
+
+    <div class="section secondary">
+      <div class="form-container">
+        <input type="text" placeholder="Your Name" #NameInput>
+        <input type="text" placeholder="Your Restaurant name">
+        <input type="number" placeholder="No. of Restaurant Branches">
+        <textarea class="thoughts-input" type="text" placeholder="Please tell us your reason for a custom pricing"></textarea>
+        <input type="text" placeholder="Most preferred price range (5% - 20%)">
+        <div class="input-combined">
+          <input type="email" placeholder="Your work Email Address">
+          <button>
+            <span>Send us an offer</span>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-layout center bottom-links">
+    <div class="section primary">
+      <a href="/onboarding/pricing" class="button"><span>Our pricing packages</span></a>
+      <a href="/" class="button bordered"><span>Take me home</span></a>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,83 @@
+@import '../../../variables.scss';
+
+.footer-container {
+  padding: 40px $DEFAULT_PAGE_MARGIN;
+  margin-top: 80px;
+  background: $BACKGROUND_COLOR_LIGHT;
+}
+
+.footer-container .flex-layout {
+  justify-content: space-between;
+}
+
+.footer-container .brand-logo img {
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid $TEXT_COLOR;
+}
+
+.footer-container .footer-section-title,
+.footer-container .footer-section-title > * {
+  margin: 10px 0 $DEFAULT_PADDING 0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.footer-container .footer-links a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  border-bottom: none;
+  color: $TEXT_COLOR;
+  opacity: .7;
+  transition: opacity 300ms ease;
+}
+
+.footer-container .footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-container .brand-name {
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.footer-container .footer-bottom-section {
+  text-align: center;
+  padding: 50px 0 20px 0;
+}
+
+.footer-container .footer-bottom-section a {
+  display: inline-block;
+  padding: $DEFAULT_PADDING;
+  text-decoration: none;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+.footer-container .footer-bottom-section .attribution-company-copyrights {
+  color: $TEXT_COLOR_LIGHT;
+  font-size: small;
+  font-weight: 500;
+  opacity: .6;
+}
+
+
+.footer-container .social-links a {
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  margin: 40px 10px;
+  opacity: .6;
+  height: 40px;
+  width: 40px;
+  border: $BORDER;
+  border-radius: 100px;
+  transition: opacity 300ms ease;
+}
+
+.footer-container .social-links a:hover {
+  opacity: 1;
+}
+
+///////////////////////////////////////////////////////???????????????????????////

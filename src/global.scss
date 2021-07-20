@@ -45,6 +45,7 @@ ion-content {
   font-family: $DEFAULT_FONT_FAMILY;
   color: $TEXT_COLOR;
   box-sizing: border-box;
+  outline: none;
 }
 
 *::selection {
@@ -52,11 +53,20 @@ ion-content {
   color: $TEXT_COLOR;
 }
 
+*[isShow=false] {
+  opacity: 0;
+}
+
 a {
-  font-weight: 600;
+  font-weight: 500;
   color: $THEME_COLOR;
   text-decoration: none;
   border-bottom: 2px solid $THEME_COLOR;
+  transition: color 300ms ease;
+}
+
+a:hover {
+  color: rgb(143, 214, 35);
 }
 
 
@@ -143,14 +153,15 @@ app-header {
 button,
 .button,
 input,
-.input {
+.input,
+textarea {
   display: inline-flex;
   gap: 10px;
   align-items: center;
   padding: 10px $DEFAULT_PADDING;
   border: none;
-  border-radius: 100px;
-  font-weight: 600;
+  border-radius: 0;
+  font-weight: 500;
   background: $THEME_COLOR;
   font-size: $DEFAULT_BUTTON_FONT_SIZE !important;
   cursor: pointer;
@@ -166,7 +177,17 @@ button > span,
 button.bordered,
 .button.bordered {
   background: transparent;
-  border: $BORDER !important;
+  border: $BORDER;
+}
+
+button.light,
+.button.light {
+  background: $TEXT_COLOR;
+}
+
+button.light > *,
+.button.light > * {
+  color: $TEXT_ON_LIGHT !important;
 }
 
 button:hover,
@@ -187,17 +208,18 @@ button:last-child,
 
 /* Input fields and forms */
 input,
-.input {
-  border: 2px solid darken($TEXT_COLOR_LIGHT, .2);
+.input,
+textarea {
   background: $BACKGROUND_COLOR;
-  padding: 10px $DEFAULT_PADDING;
   cursor: text;
   transition: border-color 300ms ease;
-  font-weight: 600;
+  border: 2px solid darken($TEXT_COLOR_LIGHT, .2);
+  margin-bottom: 10px;
 }
 
 input:focus,
-.input:focus-within {
+.input:focus-within,
+textarea:focus {
   border-color: $TEXT_COLOR;
 }
 
@@ -216,7 +238,8 @@ input:focus,
   align-items: center;
 }
 
-.input-combined input {
+.input-combined input,
+.input-combined textarea {
   flex: 1;
   border-radius: 0;
   margin: 0;
@@ -241,7 +264,7 @@ input,
 /* Header title */
 .header-title,
 .subheader-title {
-  font-weight: bolder;
+  font-weight: 900;
   margin: 10px 0;
 }
 
@@ -319,12 +342,16 @@ input,
 }
 
 .section .section-image {
-  height: 300px;
   width: calc(100% + 60px);
-  background: $TEXT_COLOR_LIGHT;
   transform: translateX(-30px);
   border-radius: 10px;
   margin-top: $DEFAULT_PADDING;
+}
+
+.section .section-image img {
+  width: 100%;
+  border-radius: 10px;
+  background: $BACKGROUND_COLOR_LIGHT;
 }
 
 .section .section-tag-name {
@@ -337,9 +364,30 @@ input,
   margin-bottom: 20px;
 }
 
-
-
 .bottom-links {
   display: grid;
   place-items: center;
+}
+
+/* Table layout */
+table {
+  width: 100%;
+}
+
+table tr {
+  border-bottom: $BORDER;
+}
+
+table tr td {
+  padding: $DEFAULT_PADDING;
+  font-weight: 500;
+}
+
+table thead tr td,
+table tbody tr td:first-child {
+  font-weight: 900;
+}
+
+table tbody tr td:first-child {
+  padding-left: 0;
 }

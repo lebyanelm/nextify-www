@@ -1,0 +1,14 @@
+.form-container .input-combined,
+.form-container input,
+.form-container textarea {
+  width: 100%;
+}
+
+.form-container input:not(.form-container .input-combined input),
+.form-container textarea {
+  transform: translateX(-5px);
+}
+
+.form-container textarea.thoughts-input {
+  height: 100px;
+}

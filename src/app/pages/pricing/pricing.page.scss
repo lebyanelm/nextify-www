@@ -1,0 +1,71 @@
+@import "../../../variables.scss";
+
+.pricing-table {
+  display: flex;
+  width: 70vw;
+  width: calc(100% + 100px);
+  transform: translateX(-50px);
+}
+
+.pricing-table > * {
+  flex: 1;
+  text-align: center;
+  border-color: transparentize($TEXT_COLOR, .96);
+  padding: $DEFAULT_PADDING;
+}
+
+.pricing-table > *:nth-child(2) {
+  background: $BACKGROUND_COLOR_LIGHT;
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba($TEXT_COLOR, .05);
+}
+
+.pricing-table .pricing-section .pricing-package-name {
+  font-weight: 900;
+}
+
+.recommendation {
+  padding: 5px 10px 6px 10px;
+  border-radius: 50px;
+  background: $THEME_COLOR;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+// The price of the section, represented in a percentage
+.pricing-table .pricing-section .price {
+  width: 100%;
+}
+
+.pricing-table .pricing-section .pricing-package-price {
+  font-family: 'Hack', 'Aktiv Grotesk', -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.pricing-table .pricing-section .pricing-frequency {
+  opacity: .6;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  font-size: smaller !important;
+  margin-bottom: 20px;
+}
+
+.pricing-table .pricing-section .package-items-title {
+  padding: 0 0 15px 0;
+  margin: 0 0 15px 0;
+  border-bottom: $BORDER;
+  font-weight: 600;
+}
+
+.package-item .name {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.pricing-table .pricing-section .button {
+  width: 100%;
+  text-align: center;
+}

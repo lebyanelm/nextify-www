@@ -1,0 +1,42 @@
+<ion-content (ionScroll)="Header.scrollEvent($event)" [scrollEvents]=true>
+  <app-header #Header></app-header>
+
+  <div class="page-content">
+    <div class="section primary">
+      <div class="section-title subheader-title">A transparent view of all third-party services
+        we have integrated to offer you the best platform.</div>
+      <div class="section-buttons">
+      </div>
+
+      <br>
+      <div class="section-image">
+        <img src="/assets/images/bouncing-paint-droplets.gif">
+      </div>
+    </div>
+
+    <div class="section primary">
+      <div class="section-tag-name">Nextify for Partners</div>
+      <div class="section-title header-title">Integrations.</div>
+    </div>
+
+    <div class="section secondary">
+      <div class="integrations">
+        <a href="/integrations/all" class="integration">All</a>
+        <a href="/integrations/data-storage" class="integration">Data Storage</a>
+        <a href="/integrations/marketing-analytics" class="integration">Marketing and Analytics Collections</a>
+        <a href="/integrations/customer-loyalty-communications" class="integration">Customer Loyalty and Communications</a>
+        <a href="/integrations/mapping-location-services" class="integration">Mapping and Customer Location</a>
+        <a href="/integrations/payments-transaction-services" class="integration">Payments and Transactions Services</a>
+      </div>
+    </div>
+
+    <div class="flex-layout center bottom-links">
+      <div class="section primary">
+        <a href="/onboarding/pricing" class="button"><span>Our pricing packages</span></a>
+        <a href="/" class="button bordered"><span>Take me home</span></a>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

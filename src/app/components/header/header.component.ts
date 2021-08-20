@@ -18,14 +18,6 @@ export class HeaderComponent implements OnInit {
         const scrollTop = scrollElement.scrollTop;
         if (scrollTop > 0) {
           this.isScrolledPage = true;
-
-          // For hiding the logo
-          const scrollPercentage = (scrollTop / scrollElement.scrollHeight) * 100;
-          if (scrollPercentage > 70) {
-            this.isShowLogo = false;
-          } else {
-            this.isShowLogo = true;
-          }
         } else {
           this.isScrolledPage = false;
         }

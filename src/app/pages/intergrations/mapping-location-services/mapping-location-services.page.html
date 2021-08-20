@@ -1,0 +1,28 @@
+<ion-content (ionScroll)="Header.scrollEvent($event)" [scrollEvents]=true>
+  <app-header #Header></app-header>
+
+  <div class="page-content">
+
+    <div class="section primary">
+      <div class="section-tag-name">Integrations</div>
+      <div class="section-title subheader-title">Mapping and Customer Location</div>
+    </div>
+
+    <div class="section secondary">
+      <div class="integration-items">
+        <div class="integration-item"><img src="/assets/images/integrations/google-maps.png" alt="Google Maps"></div>
+        <div class="integration-item"><img src="/assets/images/integrations/google-geocoding.png" alt="Google Maps Geocoding"></div>
+        <div class="integration-item"><img src="/assets/images/integrations/mapbox.png" alt="Mapbox"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-layout center bottom-links">
+    <div class="section primary">
+      <a href="/onboarding/pricing" class="button"><span>Our pricing packages</span></a>
+      <a href="/integrations" class="button bordered"><span>Go back to integrations</span></a>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

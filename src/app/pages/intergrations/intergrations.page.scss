@@ -1,0 +1,14 @@
+@import "../../../variables.scss";
+
+.section-title {
+  max-width: 60%;
+}
+
+.integrations .integration {
+  display: block;
+  padding: $DEFAULT_PADDING 0;
+  border-bottom: $BORDER;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: $TEXT_COLOR;
+}

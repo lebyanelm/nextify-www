@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -26,11 +26,9 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import "./variables.scss";
 
-
 /* Browser resets */
 ion-content,
-html
-body {
+html body {
   padding: 0;
   margin: 0;
   height: 90000px;
@@ -43,6 +41,7 @@ ion-content {
 * {
   font-size: $DEFAULT_FONT_SIZE;
   font-family: $DEFAULT_FONT_FAMILY;
+  font-weight: 600;
   color: $TEXT_COLOR;
   box-sizing: border-box;
   outline: none;
@@ -53,7 +52,7 @@ ion-content {
   color: $TEXT_COLOR;
 }
 
-*[isShow=false] {
+*[isShow="false"] {
   opacity: 0;
 }
 
@@ -68,7 +67,6 @@ a {
 a:hover {
   color: $THEME_COLOR;
 }
-
 
 /* Helpers for moving elements around */
 .space {
@@ -129,25 +127,21 @@ a:hover {
   max-width: 60%;
 }
 
-
 /* Icons */
 ion-icon {
   font-size: $DEFAULT_ICON_SIZE;
 }
-
 
 /* Page header element */
 app-header {
   width: 100%;
 }
 
-
 /* Page container */
 .page-content {
   position: relative !important;
   padding: 0 $DEFAULT_PAGE_MARGIN;
 }
-
 
 /* Default Button */
 button,
@@ -162,8 +156,9 @@ textarea {
   border: $BORDER;
   border-color: $THEME_COLOR;
   border-radius: 0;
-  font-weight: 500;
+  font-weight: 700;
   background: $THEME_COLOR;
+  text-transform: uppercase;
   font-size: $DEFAULT_BUTTON_FONT_SIZE !important;
   cursor: pointer;
   transition: all 300ms ease;
@@ -171,7 +166,7 @@ textarea {
 }
 
 button > span,
-.button > span  {
+.button > span {
   font-size: $DEFAULT_BUTTON_FONT_SIZE !important;
 }
 
@@ -179,6 +174,7 @@ button.bordered,
 .button.bordered {
   background: transparent;
   border-color: $TEXT_COLOR_LIGHT;
+  color: $TEXT_COLOR;
 }
 
 button.light,
@@ -207,7 +203,6 @@ button:last-child,
   margin-right: 0;
 }
 
-
 /* Input fields and forms */
 input,
 .input,
@@ -215,7 +210,7 @@ textarea {
   background: $BACKGROUND_COLOR;
   cursor: text;
   transition: border-color 300ms ease;
-  border: 2px solid darken($TEXT_COLOR_LIGHT, .2);
+  border: 2px solid darken($TEXT_COLOR_LIGHT, 0.2);
   margin-bottom: 10px;
 }
 
@@ -225,7 +220,6 @@ textarea:focus {
   border-color: $THEME_COLOR;
 }
 
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -233,7 +227,6 @@ textarea:focus {
   padding: 80px 100px 0 100px;
   margin: 0 auto;
 }
-
 
 .input-combined {
   display: flex;
@@ -254,14 +247,12 @@ textarea:focus {
   padding: 11.5px $DEFAULT_PADDING;
 }
 
-
 button,
 .button,
 input,
 .input {
   outline: none;
 }
-
 
 /* Header title */
 .header-title,
@@ -278,7 +269,6 @@ input,
 .subheader-title {
   font-size: $DEFAULT_SUBHEADER_FONT_SIZE;
 }
-
 
 /* Sections */
 .sections {
@@ -347,7 +337,6 @@ input,
   width: calc(100% + 60px);
   transform: translateX(-30px);
   border-radius: 10px;
-  margin-top: $DEFAULT_PADDING;
 }
 
 .section .section-image img {

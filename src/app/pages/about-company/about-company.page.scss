@@ -1,0 +1,65 @@
+@import "../../../variables.scss";
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+}
+
+.metrics-items .metrics-image {
+  display: block;
+  background-color: $BACKGROUND_COLOR_LIGHT;
+}
+
+.metrics-items table tr {
+  border: none;
+}
+
+.metrics-items table tr .metric-value {
+  font-size: 40px;
+  font-family: "Fira Code";
+  font-weight: bolder;
+}
+
+.metrics-items table tr .metric-name {
+  font-size: smaller;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+// FLEX LAYOUT
+.flex-layout {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-layout > * {
+  flex: 1;
+}
+
+// CENTERED LAYOUT
+.centered-layout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.centered-layout .image,
+.flex-layout .image {
+  height: 300px;
+  width: 300px;
+  background-color: $BACKGROUND_COLOR_LIGHT;
+  background-size: contain;
+  margin: 0 !important;
+}
+
+.centered-layout .image {
+  width: 100%;
+  margin-bottom: $DEFAULT_PADDING;
+  transform: translateX($DEFAULT_PADDING);
+  background-position: center;
+}
+
+.section-buttons .button.color-light {
+  color: #fff;
+}

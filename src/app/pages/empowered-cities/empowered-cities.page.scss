@@ -1,0 +1,22 @@
+.section.primary {
+  padding-top: 50px;
+}
+
+// LISTED CITIES
+section {
+  margin-top: 40px;
+}
+
+.section.secondary .cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section.secondary .cities > * {
+  display: block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  gap: 10px;
+  text-decoration: none;
+  border-bottom: none;
+}

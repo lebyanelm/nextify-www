@@ -1,0 +1,29 @@
+<ion-content (ionScroll)="Header.scrollEvent($event)" [scrollEvents]=true>
+  <app-header #Header></app-header>
+
+  <div class="page-content">
+    <div class="section primary">
+      <div class="section-tag-name">Nextify for Partners</div>
+      <div class="section-title subheader-title">Empowered Cities</div>
+    </div>
+
+    <div class="section secondary">
+      <section *ngFor="let alphabet of this.alphabets">
+        <div class="section-tag-name">{{alphabet}}</div>
+        <div class="cities">
+          <a [href]="['https://www.google.com/search?q=', city.toLowerCase()].join('')" target="_blank" *ngFor="let city of this.cities[alphabet]">{{city}}</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="section primary" style="text-align: center;">
+      <div class="section-tag-name">JOIN THE PLATFORM</div>
+      <div class="section-title subheader-title">Become a Partner</div>
+      <div class="section-buttons">
+        <a href="https://management.nextify.co.za/onboarding/" class="button" style="color: #FFF;">Join the Growth</a>
+      </div>
+    </div>
+  </div>
+
+  <app-footer #Header></app-footer>
+</ion-content>
